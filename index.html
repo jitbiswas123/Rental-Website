@@ -1,0 +1,986 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RentCycle</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="index.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="respons.css">
+
+</head>
+
+<body>
+  <nav class="navbar navbar-dark bg-secondary fixed-top">
+    <div class="container-fluid">
+      <a class="navbar-brand ms-3" href="#"><span class="rent">Rent</span><span class="cycle">Cycle</span></a>
+
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar"
+        aria-controls="offcanvasDarkNavbar" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasDarkNavbar"
+        aria-labelledby="offcanvasDarkNavbarLabel">
+        <div class="offcanvas-header">
+          <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel"><span class="rent"
+              style="font-size: 26px;">Rent</span><span class="cycle" style="font-size: 26px;">Cycle</span></h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"
+            aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+          <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Explore items</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Blog</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Services</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">About Us</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">
+                <button type="button" class="btn btn-outline-primary" style="width: 70px;">Sell</button>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="login">
+                <button type="button" class="btn btn-outline-primary" style="width: 90px;">Log Out</button>
+              </a>
+            </li>
+          </ul>
+          <form class="d-flex mt-3 form" role="search">
+            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-success" type="submit">Search</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <section class="hero-section">
+    <ul class="nav justify-content-center">
+
+      <div class="dropdown-center">
+        <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+          All Category
+        </button>
+        <ul class="dropdown-menu">
+          <li><a class="dropdown-item" href="#">Popular Books</a>
+            <ul>
+              <li><a href="">English Comphrehension</a></li>
+              <li><a href="">Mathematics</a></li>
+              <li><a href="">DSA Full course</a></li>
+              <li><a href="">English Comphrehension II</a></li>
+            </ul>
+          </li>
+          <li><a class="dropdown-item" href="#">Popular Games</a>
+            <ul>
+              <li><a href="">GTA-V</a></li>
+              <li><a href="">Watch Dogs</a></li>
+              <li><a href="">Need For Speed</a></li>
+              <li><a href="">Palworld</a></li>
+            </ul>
+          </li>
+          <li><a class="dropdown-item" href="#">OTTs</a>
+            <ul>
+              <li><a href="">Netflix</a></li>
+              <li><a href="">Sonyliv</a></li>
+              <li><a href="">Hotstar</a></li>
+              <li><a href="">Jio Cinema</a></li>
+            </ul>
+
+          </li>
+        </ul>
+      </div>
+
+      <li class="nav-item">
+        <a class="nav-link" aria-current="page" href="#electronics">Electronics</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#books">Books</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#games">Games</a>
+      </li>
+      <!-- <li class="nav-item">
+              <a class="nav-link" href="#">Cloths</a>
+            </li> -->
+      <li class="nav-item">
+        <a class="nav-link" href="#households">Households</a>
+      </li>
+    </ul>
+  </section>
+
+  <section class="sidebar-section">
+    <ul>
+      <li>
+        <a href=""><i class="fa-solid fa-house"></i>
+          <p>Home</p>
+        </a>
+      </li>
+      <li>
+        <a href=""><i class="bi bi-grid-1x2-fill"></i>
+          <p>Dashboard</p>
+        </a>
+      </li>
+      <li>
+        <a href=""><i class="bi bi-person-circle"></i>
+          <p>Profile</p>
+        </a>
+      </li>
+      <li>
+        <a href=""><i class="bi bi-gift-fill"></i>
+          <p>Rewards</p>
+        </a>
+      </li>
+      <li>
+        <a href=""><i class="bi bi-bag-check-fill"></i>
+          <p>Sell</p>
+        </a>
+      </li>
+      <li>
+        <a href=""><i class="fas fa-user-plus"></i>
+          <p>Premium</p>
+        </a>
+
+      </li>
+
+    </ul>
+    <div class="right-btn">
+      <button class="r-btn"><i class="bi bi-chevron-right"></i></button>
+    </div>
+  </section>
+
+  <section class="slider">
+    <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="images/hero2.webp" class="d-block w-100" alt="..." height="251">
+        </div>
+        <div class="carousel-item">
+          <img src="images/hero1.webp" class="d-block w-100" alt="..." height="251">
+        </div>
+        <div class="carousel-item">
+          <img src="images/hero3.png" class="d-block w-100" alt="..." height="251" style="object-fit: cover; ">
+        </div>
+        <div class="carousel-item">
+          <img src="images/hero4.jpg" class="d-block w-100" alt="..." height="251" style="object-fit: cover; ">
+        </div>
+        <div class="carousel-item">
+          <img src="images/hero5.jpeg" class="d-block w-100" alt="..." height="251" style="object-fit: cover; ">
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying"
+        data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying"
+        data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+  </section>
+
+  <section class="electronics" id="electronics">
+    <div class="e-head">
+      <p id="p1">Best of Electronics</p>
+      <div class="e-more">
+        <p>See More</p>
+        <a href="electronics.html"><i class="bi bi-arrow-right-short"></i></a>
+      </div>
+    </div>
+
+    <div class="e-all">
+
+      <div class="e-items">
+        <ul class="e-box">
+          <li>
+
+            <div class="e-products">
+              <img src="images/e-item3.jpg" alt="" height="300" width="440" class="w-100">
+            </div>
+
+            <div class="e-content">
+              <div class="e-name">
+                <h3 class="e-h3">
+                  <a href="#">BAJAJ KTX 1.8 L DLX Electric Kettle (1.8 L, STAINLESS STEEL)</a>
+                </h3>
+                <data class="year" value="2021">2021</data>
+              </div>
+
+
+              <ul class="card-list">
+                <li class="card-list-item">
+                  <!-- <ion-icon name="people-outline"></ion-icon> -->
+                  <i class="fa-solid fa-star" style="color: #1A9DF4;"></i>
+
+                  <span class="card-item-text">4.0</span>
+                </li>
+
+                <li class="card-list-item">
+                  <!-- <ion-icon name="flash-outline"></ion-icon> -->
+                  <i class="fa-solid fa-tags" style="color: #1A9DF4;"></i>
+
+                  <span class="card-item-text">30% off</span>
+                </li>
+              </ul>
+
+              <div class="card-price-wrapper">
+
+                <p class="card-price">
+                  <strong>$2</strong> / day
+                </p>
+
+                <button class="btn fav-btn" aria-label="Add to favourite list">
+                  <i class="bi bi-heart"></i>
+                </button>
+
+                <button class="btn btn2">Rent now</button>
+
+              </div>
+          </li>
+        </ul>
+      </div>
+
+
+
+      <div class="e-items">
+        <ul class="e-box">
+          <li>
+
+            <div class="e-products">
+              <img src="images/e-item2.jpg" alt="" height="300" width="440" class="w-100">
+            </div>
+
+            <div class="e-content">
+              <div class="e-name">
+                <h3 class="e-h3">
+                  <a href="#">Arduino UNO R3 Board ATmega328P ATmega16U2 with FREE USB Cable Electronic Components
+                    Electronic Hobby Kit</a>
+                </h3>
+                <data class="year" value="2024">2024</data>
+              </div>
+
+
+              <ul class="card-list">
+                <li class="card-list-item">
+                  <!-- <ion-icon name="people-outline"></ion-icon> -->
+                  <i class="fa-solid fa-star" style="color: #1A9DF4;"></i>
+
+                  <span class="card-item-text">4.5</span>
+                </li>
+
+                <li class="card-list-item">
+                  <!-- <ion-icon name="flash-outline"></ion-icon> -->
+                  <i class="fa-solid fa-tags" style="color: #1A9DF4;"></i>
+
+                  <span class="card-item-text">10% off</span>
+                </li>
+              </ul>
+
+              <div class="card-price-wrapper">
+
+                <p class="card-price">
+                  <strong>$6</strong> / day
+                </p>
+
+                <button class="btn fav-btn" aria-label="Add to favourite list">
+                  <i class="bi bi-heart"></i>
+                </button>
+
+                <button class="btn btn2">Rent now</button>
+
+              </div>
+          </li>
+        </ul>
+      </div>
+
+      <div class="e-items">
+        <ul class="e-box">
+          <li>
+
+            <div class="e-products">
+              <img src="images/e-item1.webp" alt="" height="300" width="440" class="w-100">
+            </div>
+
+            <div class="e-content">
+              <div class="e-name">
+                <h3 class="e-h3">
+                  <a href="#">boAt Aavante Bar 2050 with Wireless Subwoofer 160 W Bluetooth Soundbar (Premium Black, 2.1
+                    Channel)</a>
+                </h3>
+                <data class="year" value="2023">2023</data>
+              </div>
+
+
+              <ul class="card-list">
+                <li class="card-list-item">
+                  <!-- <ion-icon name="people-outline"></ion-icon> -->
+                  <i class="fa-solid fa-star" style="color: #1A9DF4;"></i>
+
+                  <span class="card-item-text">4.8</span>
+                </li>
+
+                <li class="card-list-item">
+                  <!-- <ion-icon name="flash-outline"></ion-icon> -->
+                  <i class="fa-solid fa-tags" style="color: #1A9DF4;"></i>
+
+                  <span class="card-item-text">40% off</span>
+                </li>
+              </ul>
+
+              <div class="card-price-wrapper">
+
+                <p class="card-price">
+                  <strong>$5</strong> / day
+                </p>
+
+                <button class="btn fav-btn" aria-label="Add to favourite list">
+                  <i class="bi bi-heart"></i>
+                </button>
+
+                <button class="btn btn2">Rent now</button>
+
+              </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="sale">
+    <div class="sale-image">
+      <img src="images/sale.jpeg" alt="">
+    </div>
+  </section>
+
+  <section class="electronics books" id="books">
+    <div class="e-head">
+      <p id="p1">Limited Edition</p>
+      <div class="e-more">
+        <p>See More</p>
+        <a href="books.html"><i class="bi bi-arrow-right-short"></i></a>
+      </div>
+    </div>
+
+    <div class="e-all">
+
+      <div class="e-items">
+        <ul class="e-box">
+          <li>
+
+            <div class="e-products">
+              <img src="images/book1.jpg" alt="" height="300" width="440" class="w-100">
+            </div>
+
+            <div class="e-content">
+              <div class="e-name">
+                <h3 class="e-h3">
+                  <a href="#">A Textbook of Java Programming Paperback</a>
+                </h3>
+                <data class="year" value="2021">2024</data>
+              </div>
+
+
+              <ul class="card-list">
+                <li class="card-list-item">
+                  <!-- <ion-icon name="people-outline"></ion-icon> -->
+                  <i class="fa-solid fa-star" style="color: #1A9DF4;"></i>
+
+                  <span class="card-item-text">4.0</span>
+                </li>
+
+                <li class="card-list-item">
+                  <!-- <ion-icon name="flash-outline"></ion-icon> -->
+                  <i class="fa-solid fa-tags" style="color: #1A9DF4;"></i>
+
+                  <span class="card-item-text">5% off</span>
+                </li>
+              </ul>
+
+              <div class="card-price-wrapper">
+
+                <p class="card-price">
+                  <strong>$1</strong> / day
+                </p>
+
+                <button class="btn fav-btn" aria-label="Add to favourite list">
+                  <i class="bi bi-heart"></i>
+                </button>
+
+                <button class="btn btn2">Rent now</button>
+
+              </div>
+          </li>
+        </ul>
+      </div>
+
+
+
+      <div class="e-items">
+        <ul class="e-box">
+          <li>
+
+            <div class="e-products">
+              <img src="images/book2.jpg" alt="" height="300" width="440" class="w-100">
+            </div>
+
+            <div class="e-content">
+              <div class="e-name">
+                <h3 class="e-h3">
+                  <a href="#">A handbook on Mechanical Engineering</a>
+                </h3>
+                <data class="year" value="2024">2024</data>
+              </div>
+
+
+              <ul class="card-list">
+                <li class="card-list-item">
+                  <!-- <ion-icon name="people-outline"></ion-icon> -->
+                  <i class="fa-solid fa-star" style="color: #1A9DF4;"></i>
+
+                  <span class="card-item-text">4.5</span>
+                </li>
+
+                <li class="card-list-item">
+                  <!-- <ion-icon name="flash-outline"></ion-icon> -->
+                  <i class="fa-solid fa-tags" style="color: #1A9DF4;"></i>
+
+                  <span class="card-item-text">10% off</span>
+                </li>
+              </ul>
+
+              <div class="card-price-wrapper">
+
+                <p class="card-price">
+                  <strong>$1</strong> / day
+                </p>
+
+                <button class="btn fav-btn" aria-label="Add to favourite list">
+                  <i class="bi bi-heart"></i>
+                </button>
+
+                <button class="btn btn2">Rent now</button>
+
+              </div>
+          </li>
+        </ul>
+      </div>
+
+      <div class="e-items">
+        <ul class="e-box">
+          <li>
+
+            <div class="e-products">
+              <img src="images/book3.jpg" alt="" height="300" width="440" class="w-100">
+            </div>
+
+            <div class="e-content">
+              <div class="e-name">
+                <h3 class="e-h3">
+                  <a href="#">Wren & Martin High School English Grammar and Composition Self-practice Book</a>
+                </h3>
+                <data class="year" value="2023">2023</data>
+              </div>
+
+
+              <ul class="card-list">
+                <li class="card-list-item">
+                  <!-- <ion-icon name="people-outline"></ion-icon> -->
+                  <i class="fa-solid fa-star" style="color: #1A9DF4;"></i>
+
+                  <span class="card-item-text">4.0</span>
+                </li>
+
+                <li class="card-list-item">
+                  <!-- <ion-icon name="flash-outline"></ion-icon> -->
+                  <i class="fa-solid fa-tags" style="color: #1A9DF4;"></i>
+
+                  <span class="card-item-text">40% off</span>
+                </li>
+              </ul>
+
+              <div class="card-price-wrapper">
+
+                <p class="card-price">
+                  <strong>$0.5</strong> / day
+                </p>
+
+                <button class="btn fav-btn" aria-label="Add to favourite list">
+                  <i class="bi bi-heart"></i>
+                </button>
+
+                <button class="btn btn2">Rent now</button>
+
+              </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="sell">
+    <div class="sell-img">
+      <img src="images/sell.webp" alt="">
+    </div>
+  </section>
+
+
+  <section class="electronics games" id="games">
+    <div class="e-head">
+      <p id="p1">Trending Games</p>
+      <div class="e-more">
+        <p>See More</p>
+        <a href="game.html"><i class="bi bi-arrow-right-short"></i></a>
+      </div>
+    </div>
+
+    <div class="e-all">
+
+      <div class="e-items">
+        <ul class="e-box">
+          <li>
+
+            <div class="e-products">
+              <img src="images/game1.jpg" alt="" height="300" width="440" class="w-100">
+            </div>
+
+            <div class="e-content">
+              <div class="e-name">
+                <h3 class="e-h3">
+                  <a href="#">Rockstar Games PS5 Grand Theft Auto V</a>
+                </h3>
+                <data class="year" value="2021">2024</data>
+              </div>
+
+
+              <ul class="card-list">
+                <li class="card-list-item">
+                  <!-- <ion-icon name="people-outline"></ion-icon> -->
+                  <i class="fa-solid fa-star" style="color: #1A9DF4;"></i>
+
+                  <span class="card-item-text">4.0</span>
+                </li>
+
+                <li class="card-list-item">
+                  <!-- <ion-icon name="flash-outline"></ion-icon> -->
+                  <i class="fa-solid fa-tags" style="color: #1A9DF4;"></i>
+
+                  <span class="card-item-text">5% off</span>
+                </li>
+              </ul>
+
+              <div class="card-price-wrapper">
+
+                <p class="card-price">
+                  <strong>$5</strong> / day
+                </p>
+
+                <button class="btn fav-btn" aria-label="Add to favourite list">
+                  <i class="bi bi-heart"></i>
+                </button>
+
+                <button class="btn btn2">Rent now</button>
+
+              </div>
+          </li>
+        </ul>
+      </div>
+
+
+
+      <div class="e-items">
+        <ul class="e-box">
+          <li>
+
+            <div class="e-products">
+              <img src="images/game2.webp" alt="" height="300" width="440" class="w-100">
+            </div>
+
+            <div class="e-content">
+              <div class="e-name">
+                <h3 class="e-h3">
+                  <a href="#">Palworld</a>
+                </h3>
+                <data class="year" value="2024">2024</data>
+              </div>
+
+
+              <ul class="card-list">
+                <li class="card-list-item">
+                  <!-- <ion-icon name="people-outline"></ion-icon> -->
+                  <i class="fa-solid fa-star" style="color: #1A9DF4;"></i>
+
+                  <span class="card-item-text">4.5</span>
+                </li>
+
+                <li class="card-list-item">
+                  <!-- <ion-icon name="flash-outline"></ion-icon> -->
+                  <i class="fa-solid fa-tags" style="color: #1A9DF4;"></i>
+
+                  <span class="card-item-text">15% off</span>
+                </li>
+              </ul>
+
+              <div class="card-price-wrapper">
+
+                <p class="card-price">
+                  <strong>$1.5</strong> / day
+                </p>
+
+                <button class="btn fav-btn" aria-label="Add to favourite list">
+                  <i class="bi bi-heart"></i>
+                </button>
+
+                <button class="btn btn2">Rent now</button>
+
+              </div>
+          </li>
+        </ul>
+      </div>
+
+      <div class="e-items">
+        <ul class="e-box">
+          <li>
+
+            <div class="e-products">
+              <img src="images/game3.jpg" alt="" height="300" width="440" class="w-100">
+            </div>
+
+            <div class="e-content">
+              <div class="e-name">
+                <h3 class="e-h3">
+                  <a href="#">Need For Speed</a>
+                </h3>
+                <data class="year" value="2023">2023</data>
+              </div>
+
+
+              <ul class="card-list">
+                <li class="card-list-item">
+                  <!-- <ion-icon name="people-outline"></ion-icon> -->
+                  <i class="fa-solid fa-star" style="color: #1A9DF4;"></i>
+
+                  <span class="card-item-text">4.0</span>
+                </li>
+
+                <li class="card-list-item">
+                  <!-- <ion-icon name="flash-outline"></ion-icon> -->
+                  <i class="fa-solid fa-tags" style="color: #1A9DF4;"></i>
+
+                  <span class="card-item-text">40% off</span>
+                </li>
+              </ul>
+
+              <div class="card-price-wrapper">
+
+                <p class="card-price">
+                  <strong>$0.5</strong> / day
+                </p>
+
+                <button class="btn fav-btn" aria-label="Add to favourite list">
+                  <i class="bi bi-heart"></i>
+                </button>
+
+                <button class="btn btn2">Rent now</button>
+
+              </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="electronics households" id="households">
+    <div class="e-head">
+      <p id="p1">Lowest Price</p>
+      <div class="e-more">
+        <p>See More</p>
+        <a href="households.html"><i class="bi bi-arrow-right-short"></i></a>
+      </div>
+    </div>
+
+    <div class="e-all">
+
+      <div class="e-items">
+        <ul class="e-box">
+          <li>
+
+            <div class="e-products">
+              <img src="images/household1.webp" alt="" height="300" width="440" class="w-100">
+            </div>
+
+            <div class="e-content">
+              <div class="e-name">
+                <h3 class="e-h3">
+                  <a href="#">HOMESTIC Plastic Strong Bucket for Bathroom for Bathing|18 LTR|Gray 18 L Plastic Bucket
+                    (Grey)</a>
+                </h3>
+                <data class="year" value="2021">2024</data>
+              </div>
+
+
+              <ul class="card-list">
+                <li class="card-list-item">
+                  <!-- <ion-icon name="people-outline"></ion-icon> -->
+                  <i class="fa-solid fa-star" style="color: #1A9DF4;"></i>
+
+                  <span class="card-item-text">4.0</span>
+                </li>
+
+                <li class="card-list-item">
+                  <!-- <ion-icon name="flash-outline"></ion-icon> -->
+                  <i class="fa-solid fa-tags" style="color: #1A9DF4;"></i>
+
+                  <span class="card-item-text">5% off</span>
+                </li>
+              </ul>
+
+              <div class="card-price-wrapper">
+
+                <p class="card-price">
+                  <strong>$0.5</strong> / day
+                </p>
+
+                <button class="btn fav-btn" aria-label="Add to favourite list">
+                  <i class="bi bi-heart"></i>
+                </button>
+
+                <button class="btn btn2">Rent now</button>
+
+              </div>
+          </li>
+        </ul>
+      </div>
+
+
+
+      <div class="e-items">
+        <ul class="e-box">
+          <li>
+
+            <div class="e-products">
+              <img src="images/household2.jpg" alt="" height="300" width="440" class="w-100">
+            </div>
+
+            <div class="e-content">
+              <div class="e-name">
+                <h3 class="e-h3">
+                  <a href="#">Soft Mattress (Single Bed)</a>
+                </h3>
+                <data class="year" value="2024">2024</data>
+              </div>
+
+
+              <ul class="card-list">
+                <li class="card-list-item">
+                  <!-- <ion-icon name="people-outline"></ion-icon> -->
+                  <i class="fa-solid fa-star" style="color: #1A9DF4;"></i>
+
+                  <span class="card-item-text">4.5</span>
+                </li>
+
+                <li class="card-list-item">
+                  <!-- <ion-icon name="flash-outline"></ion-icon> -->
+                  <i class="fa-solid fa-tags" style="color: #1A9DF4;"></i>
+
+                  <span class="card-item-text">15% off</span>
+                </li>
+              </ul>
+
+              <div class="card-price-wrapper">
+
+                <p class="card-price">
+                  <strong>$2</strong> / day
+                </p>
+
+                <button class="btn fav-btn" aria-label="Add to favourite list">
+                  <i class="bi bi-heart"></i>
+                </button>
+
+                <button class="btn btn2">Rent now</button>
+
+              </div>
+          </li>
+        </ul>
+      </div>
+
+      <div class="e-items">
+        <ul class="e-box">
+          <li>
+
+            <div class="e-products">
+              <img src="images/household3.jpg" alt="" height="300" width="440" class="w-100">
+            </div>
+
+            <div class="e-content">
+              <div class="e-name">
+                <h3 class="e-h3">
+                  <a href="#">Black Blazer with tie</a>
+                </h3>
+                <data class="year" value="2023">2023</data>
+              </div>
+
+
+              <ul class="card-list">
+                <li class="card-list-item">
+                  <!-- <ion-icon name="people-outline"></ion-icon> -->
+                  <i class="fa-solid fa-star" style="color: #1A9DF4;"></i>
+
+                  <span class="card-item-text">4.0</span>
+                </li>
+
+                <li class="card-list-item">
+                  <!-- <ion-icon name="flash-outline"></ion-icon> -->
+                  <i class="fa-solid fa-tags" style="color: #1A9DF4;"></i>
+
+                  <span class="card-item-text">40% off</span>
+                </li>
+              </ul>
+
+              <div class="card-price-wrapper">
+
+                <p class="card-price">
+                  <strong>$1</strong> / day
+                </p>
+
+                <button class="btn fav-btn" aria-label="Add to favourite list">
+                  <i class="bi bi-heart"></i>
+                </button>
+
+                <button class="btn btn2">Rent now</button>
+
+              </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+
+  <section class="filter">
+    <h3 class="f-h3">Filter</h3>
+    <div class="filter-search">
+      <input type="search" placeholder="Search Filter">
+    </div>
+
+    <div class="filter-category">
+      <select name="category" id="category" class="category">
+        <option value="category">--All Category--</option>
+        <option value="electronics">Electronics</option>
+        <option value="books">Books</option>
+        <option value="games">Games</option>
+        <option value="otts">OTTs</option>
+        <option value="households">Households</option>
+      </select>
+    </div>
+
+
+    <div class="filter-price">
+      <div class="price-bar">
+        <p>Price</p>
+        <input type="range" min="1" max="100" value="10" id="myRange">
+        <p class="p-price">Price<span id="sliderValue">$ 1</span></p>
+      </div>
+    </div>
+
+
+    <div class="filter-days">
+      <p style="padding: 10px;">Rent for</p>
+      <input type="range" min="1" max="5" value="3" class="d-slider" id="daysSlider">
+      <p class="p-day"><span id="daysCount">3</span> Days</p>
+    </div>
+
+    <div class="filter-button">
+      <input type="submit" id="button" value="Apply Filter">
+    </div>
+  </section>
+
+  <section class="footer-section">
+    <footer class="py-5">
+      <div class="row">
+        <div class="col-6 col-md-2 mb-3">
+          <h5>Subject</h5>
+          <ul class="nav flex-column">
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Home</a></li>
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Features</a></li>
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Pricing</a></li>
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">FAQs</a></li>
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">About</a></li>
+          </ul>
+        </div>
+  
+        <div class="col-6 col-md-2 mb-3">
+          <h5>Section</h5>
+          <ul class="nav flex-column">
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Home</a></li>
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Features</a></li>
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Pricing</a></li>
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">FAQs</a></li>
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">About</a></li>
+          </ul>
+        </div>
+  
+        <div class="col-6 col-md-2 mb-3">
+          <h5>Section</h5>
+          <ul class="nav flex-column">
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Home</a></li>
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Features</a></li>
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Pricing</a></li>
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">FAQs</a></li>
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">About</a></li>
+          </ul>
+        </div>
+  
+        <div class="col-md-5 offset-md-1 mb-3">
+          <form>
+            <h5>Subscribe to our newsletter</h5>
+            <p>Monthly digest of what's new and exciting from us.</p>
+            <div class="d-flex flex-column flex-sm-row w-100 gap-2">
+              <label for="newsletter1" class="visually-hidden">Email address</label>
+              <input id="newsletter1" type="text" class="form-control" placeholder="Email address">
+              <button class="btn btn-primary" type="button">Subscribe</button>
+            </div>
+          </form>
+        </div>
+      </div>
+  
+      <div class="d-flex flex-column flex-sm-row justify-content-between py-4 my-4 border-top f-end">
+        <p>© 2024 Company, Inc. All rights reserved.</p>
+        <ul class="list-unstyled d-flex">
+          <li class="ms-3"><a class="link-body-emphasis" href="#"><svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-twitter-x" viewBox="0 0 16 16">
+            <path d="M12.6.75h2.454l-5.36 6.142L16 15.25h-4.937l-3.867-5.07-4.425 5.07H.316l5.733-6.57L0 .75h5.063l3.495 4.633L12.601.75Zm-.86 13.028h1.36L4.323 2.145H2.865z"/>
+          </svg></a></li>
+          <li class="ms-3"><a class="link-body-emphasis" href="#"><svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-instagram" viewBox="0 0 16 16">
+            <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.9 3.9 0 0 0-1.417.923A3.9 3.9 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.9 3.9 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.9 3.9 0 0 0-.923-1.417A3.9 3.9 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599s.453.546.598.92c.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.5 2.5 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.5 2.5 0 0 1-.92-.598 2.5 2.5 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233s.008-2.388.046-3.231c.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92s.546-.453.92-.598c.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92m-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217m0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334"/>
+          </svg></a></li>
+          <li class="ms-3"><a class="link-body-emphasis" href="#"><svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-facebook" viewBox="0 0 16 16">
+            <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951"/>
+          </svg></a></li>
+        </ul>
+      </div>
+    </footer>
+  </section>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="jquery.js"></script>
+<script src="index.js"></script>
+
+
+
+</html>

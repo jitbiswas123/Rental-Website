@@ -1,0 +1,645 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Open Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-variation-settings:
+        "wdth" 100;
+}
+
+html{
+    overflow-x: hidden;
+}
+body {
+    background-color: #F1F2F4;
+}
+
+.navbar {
+    /* background-color: #c8cacba2 !important; */
+    background-color: #c8cacb !important;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+}
+
+.rent {
+    font-size: 36px;
+    color: #007bff;
+    /* Blue color */
+    font-weight: bold;
+}
+
+.cycle {
+    font-size: 36px;
+    color: #28a745;
+    /* Green color */
+    font-weight: bold;
+}
+
+.navbar .navbar-toggler {
+    background-color: #007bffc1;
+}
+
+.navbar .offcanvas {
+    /* background-color: #c8cacbe0 !important; */
+    background-color: #c8cacb !important;
+
+}
+
+.navbar .nav-item .nav-link {
+    color: #333;
+}
+
+.navbar .form .btn {
+    background-color: #007bff;
+}
+
+.navbar .offcanvas-body .nav-item .nav-link:hover {
+    color: #007bff;
+}
+
+/************************************/
+/**********HERO SECTION**************/
+/************************************/
+
+.hero-section {
+    margin-top: 90px !important;
+    background-color: #c8cacba2;
+    height: 50px;
+    /* box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px; */
+    /* width: 1500px; */
+    margin: auto;
+    border-radius: 0px;
+    width: 100%;
+}
+
+
+.hero-section .nav-item .nav-link {
+    color: #007bff;
+    margin-top: 5px;
+}
+
+
+.hero-section .dropdown-center .btn {
+    background-color: #c8cacb00;
+    border: none;
+    margin-top: 5.5px;
+    color: #333;
+}
+
+.dropdown-center {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    width: 400px;
+    height: 300px;
+    /* overflow: hidden; */
+    overflow-y: scroll;
+}
+
+.dropdown-menu li {
+    list-style-type: none;
+    padding: 8px 12px;
+}
+
+.dropdown-item-without-dot {
+    list-style-type: none;
+}
+
+.dropdown-center:hover .dropdown-menu {
+    display: block;
+}
+
+.dropdown-menu ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.dropdown-menu ul li {
+    padding: 8px 20px;
+}
+
+.dropdown-menu ul li a {
+    display: block;
+    color: #333;
+    text-decoration: none;
+}
+
+.dropdown-menu ul li a:hover {
+    background-color: #ddd;
+}
+
+.dropdown-menu .dropdown-item {
+    font-weight: 600;
+    color: #007bff;
+
+}
+
+.dropdown-menu ul li {
+    margin-left: 20px;
+    font-size: 90%;
+    /* Adjust the font size as needed */
+    font-weight: lighter;
+    /* Adjust the font weight as needed */
+}
+
+/*********************/
+/******ICONS**********/
+/*********************/
+
+.sidebar-section {
+    margin-top: 1.5vh;
+    height: 500px;
+    background-color: #c8cacb;
+    display: flex;
+    justify-content: space-between;
+    width: 250px;
+    position: fixed;
+    border-right: 2px solid #FFFFFF;
+    border-top: 2px solid #FFFFFF;
+    border-bottom: 2px solid #FFFFFF;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    transition: left 0.3s ease;
+    /* Added transition for smooth sliding */
+    left: -230px;
+    /* Initially hide the sidebar */
+    z-index: 3;
+    /* display: none; */
+}
+
+.sidebar-section ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.sidebar-section ul li {
+    font-size: 5vh;
+    transition: 0.6s;
+
+}
+
+.sidebar-section ul li a {
+    color: #333;
+    display: flex;
+    text-decoration: none;
+}
+
+.sidebar-section ul li:hover{
+    border-left: 10px solid #28a745;
+    padding-left: 10px;
+    background-color: #007bff7d;
+
+}
+
+.sidebar-section ul li a p {
+    font-size: 3.2vh;
+    margin-left: 2vw;
+    margin-top: 1vh;
+}
+
+.sidebar-section .right-btn {
+    margin: auto;
+    z-index: 2;
+    /* position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%); */
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+
+}
+
+.sidebar-section .right-btn .r-btn {
+    border: none;
+    background-color: #FFF;
+    padding: 2.5vh;
+    border-radius: 5px;
+    border: 2px solid #c8cacb;
+    cursor: pointer;
+    /* Added cursor style for button */
+}
+
+.slide {
+    left: 0;
+    /* Slide in the sidebar */
+}
+
+.slide .right-btn {
+    left: 0px;
+    /* Adjust as needed */
+}
+
+/***********************************/
+/***********slider******************/
+/***********************************/
+
+
+.slider{
+    height: 255px;
+    margin-top: 6vh !important;
+    border: 2px solid #FFF;
+    width: 1500px;
+    margin: auto;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+}
+
+/*************************************/
+/***********Electronics***************/
+/*************************************/
+
+.electronics{
+    height: 570px;
+    width: 1200px;
+    /* background-color: red; */
+    background-color: #FFF;
+    margin-top: 6vh;
+    margin-left: 20px;
+}
+
+.electronics .e-all{
+    display: flex;
+    justify-content: space-around;
+
+}
+.electronics .e-head{
+    display: flex;
+    justify-content: space-between;
+    background-color: #FFF;
+    padding: 10px;
+    height: 50px;
+    border-bottom: 2px solid #007bff38;
+}
+
+.electronics .e-head p{
+    margin: auto;
+    margin-left: 10px !important;
+    font-weight: 500;
+}
+
+.electronics .e-head #p1{
+    font-size: 1.5vw;
+}
+
+.electronics .e-more{
+    display: flex;
+    width: 10%;
+    justify-content: space-between;
+    margin: auto;
+    margin-right: 8px !important;
+}
+
+.electronics .e-more a i{
+    color: #333;
+    transition: 0.8s;
+    font-weight: 700;
+}
+
+.electronics .e-more a i:hover{
+    color: #1A9DF4;
+}
+
+
+
+
+
+/**************************************************/
+/************************E-Box*********************/
+/**************************************************/
+
+
+.electronics .e-items .e-box{
+    margin-top: 3vh;
+    height: 480px;
+    width: 360px;
+    list-style: none;
+    background-color: #F0F4FB;
+    padding: 20px;
+    border-radius: 20px;
+    /* border: 2px solid #FFF; */
+    border: 2px solid #d6d6d660;
+}
+
+.electronics .e-items .e-box .e-products img{
+    padding: 10px;
+    border-radius: 40px;
+    width: 338px;
+}
+
+.electronics .e-box .e-content .e-name{
+    display: flex;
+    justify-content: space-between;
+}
+
+.electronics .e-box .e-content .e-h3{
+    font-size: 2.5vh;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    width: 250px;
+    font-weight: 500;
+}
+
+.electronics .e-box .e-content .e-h3 a{
+    text-decoration: none;
+    color: #007bff;
+}
+
+.electronics .e-box .e-content .e-name .year{
+    border: 2px dashed #007bff;
+    border-radius: 20px;
+    padding: 0px 10px;
+}
+
+.electronics .e-box .card-list{
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    margin-left: 20px;
+    margin-right: 20px;
+    border-bottom: 1px solid #33333358;
+}
+
+.electronics .e-box .card-price-wrapper{
+    margin-top: 3vh;
+    display: flex;
+    justify-content: space-between;
+}
+
+.electronics .e-box .card-price-wrapper .card-price{
+    font-size: 24px;
+    font-weight: 400;
+    margin-top: -0.3vh;
+}
+
+.electronics .e-box .card-price-wrapper .btn{
+    /* border: 2px solid black; */
+    font-size: 2.8vh;
+    font-weight: 600;
+    color: #1A9DF4;
+    background-color: #D9ECFC;
+    transition: 0.8s;
+    border-radius: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    height: 40px;
+}
+
+.electronics .e-box .card-price-wrapper .btn:hover{
+    color: hsl(0, 79%, 63%);
+    background-color: hsla(0, 79%, 63%, 0.163);
+}
+
+.electronics .e-box .card-price-wrapper .btn2{
+    font-size: 2.5vh;
+    background-color: #1A9DF4;
+    color: #FFF;
+    font-weight: 500;
+}
+
+.electronics .e-box .card-price-wrapper .btn2:hover{
+    color: #FFF;
+    background-color: #1a9df4a2;
+    box-shadow: 3px 3px 9px hsla(204, 92%, 59%, 0.3);
+}
+
+
+/*********************************************/
+/*****************SALE************************/
+/*********************************************/
+
+
+.sale{
+    height: 510px;
+    position: absolute;
+    right: -60px;
+    top: 538px;
+    /* z-index: -100; */
+    /* background-color: red; */
+    background-color: #FFF;
+    border-radius: 20px;
+}
+
+.sale .sale-image img{
+    width: 350px;
+    height: 510px;
+    padding: 20px;
+    border-radius: 40px;
+
+}
+
+
+/***************************************************/
+/*********************SELL IMAGE********************/
+/***************************************************/
+
+
+.sell{
+    width: 79%;
+    margin-left: 20px;
+    margin-top: 6vh;
+}
+
+.sell .sell-img {
+    width: 100%;
+    background-color: #FFF;
+    border-radius: 15px;
+}
+
+.sell .sell-img img{
+    width: 100%;
+    padding: 20px;
+    border-radius: 40px;
+}
+
+
+
+/****************************************************/
+/*****************FILTER*****************************/
+/****************************************************/
+
+
+.filter{
+    height: 100vh;
+    /* background-color: red; */
+    background-color: #FFF;
+    width: 290px;
+    position: absolute;
+    right: 0;
+    top: 1090px;
+}
+
+.filter .filter-search{
+    padding: 10px;
+    margin-left: 10px;
+}
+
+
+.filter .filter-search input{
+    width: 95%;
+    padding: 10px;
+    outline: none;
+
+}
+
+.filter .f-h3{
+    color: #333;
+    font-weight: 400;
+    padding: 10px;
+}
+
+.filter .filter-category{
+    margin-left: 20px;
+}
+
+.filter .filter-category .category{
+    width: 92%;
+    padding: 10px;
+    outline: none;
+}
+
+.filter .filter-category .category option{
+    height: 500px;
+    font-size: 2.8vh;
+    margin: 20px;
+}
+
+
+/*******************************************/
+/************PRICE-BAR**********************/
+/*******************************************/
+
+.filter-price{
+    background-color: #F0F4FB;
+    height: 150px;
+    margin: 15px;
+}
+.filter-price .price-bar {
+    width: 95%;
+    margin: 50px auto;
+    /* text-align: center; */
+    /* background-color: #007bff; */
+    height: 10px;
+}
+/* 
+.slider {
+    width: 100%;
+    height: 8px;
+} */
+
+.filter-price .price-bar input{
+    width: 100%;
+}
+p {
+    font-size: 18px;
+    margin-top: 20px;
+} 
+
+.filter-price .price-bar .p-price{
+    text-align: center;
+}
+
+
+
+.filter-days {
+    width: 95%;
+    margin: auto;
+    margin-top: 5vh !important;
+    background-color: #F0F4FB;
+    height: 150px;
+  }
+  
+  .d-slider {
+    width: 95%;
+    height: 10px;
+    border-radius: 5px;
+    background-color: #ccc;
+    outline: none;
+    margin-left: 5px;
+
+  }
+  
+  .d-slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: #4CAF50;
+    cursor: pointer;
+  }
+  
+  .filter-days .p-day{
+    text-align: center;
+  }
+
+
+  .filter-button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 150px;
+  }
+
+  .filter-button input{
+    padding: 10px;
+    border-radius: 15px;
+    background-color: #007bff;
+    border: none;
+    color: #FFF;
+    font-weight: 500;
+    transition: 0.8s;
+  }
+
+  .filter-button input:hover{
+    color: #FFF;
+    background-color: #1a9df4a2;
+    box-shadow: 3px 3px 9px hsla(204, 92%, 59%, 0.3);
+}
+
+
+
+
+/*************************************************************/
+/*********************FOOTER**********************************/
+/*************************************************************/
+
+
+.list-unstyled{
+    padding: 40px;
+}
+
+.list-unstyled li a svg:hover{
+    transform: scale(1.2);
+}
+
+.footer-section{
+    background-color: #ccc;
+    margin-top: 6vh;
+    width: 100%;
+    padding: 0px 50px;
+    border-top: 2px solid #FFF;
+}
+
+.footer-section .py-5 .row{
+    height: 200px;
+}
+
+.footer-section .py-5 .f-end{
+    height: 50px;
+
+}

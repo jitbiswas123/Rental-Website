@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up Form</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f8f9fa; /* Soft background color */
+        }
+
+        .container {
+            background-color: #fff; /* White background */
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); /* Soft shadow */
+            height: 60vh; /* 50% of the screen height */
+            width: 30%; /* 60% of the screen width */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        form {
+            text-align: center;
+            width: 100%;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            color: #007bff; /* Primary color for labels */
+        }
+
+        input[type="text"],
+        input[type="password"],
+        input[type="email"],
+        input[type="submit"] {
+            width: calc(100% - 20px); /* 100% width minus padding */
+            padding: 10px;
+            margin-top: 5px;
+            margin-bottom: 15px;
+            border: 1px solid #ced4da; /* Soft border color */
+            border-radius: 5px;
+            box-sizing: border-box;
+            background-color: #f8f9fa; /* Soft background color for inputs */
+            outline: none;
+        }
+
+        input[type="submit"] {
+            background-color: #007bff; /* Primary color for submit button */
+            color: white; /* Text color for submit button */
+            cursor: pointer;
+        }
+
+        .already-have-account {
+            margin-top: 20px;
+            font-size: 14px;
+            color: #333;
+        }
+
+        .already-have-account a {
+            color: #007bff;
+            text-decoration: none;
+        }
+
+        .already-have-account i {
+            margin-right: 5px;
+        }
+
+        .error-message {
+            color: red;
+            margin-top: 5px;
+            display: none;
+        }
+
+        .social-icons {
+            margin-top: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .social-icons i {
+            font-size: 24px;
+            margin: 0 10px;
+            cursor: pointer;
+            color: #333;
+            transition: 0.3s;
+        }
+
+        .social-icons i:hover{
+            transform: scale(1.1);
+            color: #007bff;
+        }
+
+        @media (max-width:800px) {
+            .container{
+                width: 80%;
+            }
+            
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <form id="signupForm" action="/signup" method="post">
+            <label for="username">Username</label>
+            <input type="text" id="username" placeholder="Enter username" name="name">
+            <div class="error-message" id="usernameError">Please enter username</div>
+            <br>
+            <label for="email">Email</label>
+            <input type="email" id="email" placeholder="Enter email" name="email">
+            <div class="error-message" id="emailError">Please enter email</div>
+            <br>
+            <label for="password">Password</label>
+            <input type="password" id="password" placeholder="Enter password" name="password">
+            <div class="error-message" id="passwordError">Please enter password</div>
+            <br>
+            <!-- <input type="submit" value="SIGN UP"> -->
+            <button>Submit</button>
+            <div class="social-icons">
+                <i class="fab fa-google"></i>
+                <i class="fab fa-facebook"></i>
+            </div>
+            <p class="already-have-account">
+                <i class="fas fa-user"></i>Already have an account? <a href="login.html">Login</a>
+            </p>
+        </form>
+    </div>
+
+    <script>
+        // document.getElementById('signupForm').addEventListener('submit', function(event) {
+        //     // event.preventDefault();
+        //     var username = document.getElementById('username').value.trim();
+        //     var email = document.getElementById('email').value.trim();
+        //     var password = document.getElementById('password').value.trim();
+        //     var usernameError = document.getElementById('usernameError');
+        //     var emailError = document.getElementById('emailError');
+        //     var passwordError = document.getElementById('passwordError');
+        //     var isValid = true;
+
+        //     if (username === '') {
+        //         usernameError.style.display = 'block';
+        //         isValid = false;
+        //     } else {
+        //         usernameError.style.display = 'none';
+        //     }
+
+        //     if (email === '') {
+        //         emailError.style.display = 'block';
+        //         isValid = false;
+        //     } else {
+        //         emailError.style.display = 'none';
+        //     }
+
+        //     if (password === '') {
+        //         passwordError.style.display = 'block';
+        //         isValid = false;
+        //     } else {
+        //         passwordError.style.display = 'none';
+        //     }
+
+        //     if (!isValid) {
+        //         event.preventDefault(); // Prevent form submission if validation fails
+        //     } 
+        //     else {
+        //         // Reset the input fields
+        //         document.getElementById('username').value = '';
+        //         document.getElementById('email').value = '';
+        //         document.getElementById('password').value = '';
+
+        //         console.log("Username:", username);
+        //     }
+        // });
+
+        // Event listeners to hide error messages when the fields are not empty
+        document.getElementById('username').addEventListener('input', function() {
+            var usernameError = document.getElementById('usernameError');
+            if (this.value.trim() !== '') {
+                usernameError.style.display = 'none';
+            }
+        });
+
+        document.getElementById('email').addEventListener('input', function() {
+            var emailError = document.getElementById('emailError');
+            if (this.value.trim() !== '') {
+                emailError.style.display = 'none';
+            }
+        });
+
+        document.getElementById('password').addEventListener('input', function() {
+            var passwordError = document.getElementById('passwordError');
+            if (this.value.trim() !== '') {
+                passwordError.style.display = 'none';
+            }
+        });
+    </script>
+</body>
+</html>
